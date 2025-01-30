@@ -29,9 +29,9 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send email to site owner
     const ownerEmailResponse = await resend.emails.send({
-      from: "Kingdom Business <no-reply@resend.dev>",
-      reply_to: email, // Allow direct replies to the sender
-      to: "cdobratz@protonmail.com",
+      from: "Kingdom Business <no-reply@kingdombusinessletsroll.com>",
+      reply_to: email,
+      to: "kblr1776@gmail.com",
       subject: `New Contact Form Submission: ${purpose}`,
       html: `
         <h1>New Contact Form Submission</h1>
@@ -47,7 +47,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send confirmation email to user
     const userEmailResponse = await resend.emails.send({
-      from: "Kingdom Business <no-reply@resend.dev>",
+      from: "Kingdom Business <no-reply@kingdombusinessletsroll.com>",
       to: email,
       subject: "We received your message!",
       html: `
