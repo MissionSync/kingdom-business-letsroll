@@ -25,11 +25,12 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     const { name, email, purpose, message }: ContactFormData = await req.json();
 
-    console.log("Received form submission:", { name, email, purpose });
+    console.log("Starting email sending process for:", { name, email, purpose });
 
     // Send email to site owner
     const ownerEmailResponse = await resend.emails.send({
-      from: "Kingdom Business <onboarding@resend.dev>",
+      from: "Kingdom Business <no-reply@resend.dev>",
+      reply_to: email, // Allow direct replies to the sender
       to: "cdobratz@protonmail.com",
       subject: `New Contact Form Submission: ${purpose}`,
       html: `
@@ -42,11 +43,11 @@ const handler = async (req: Request): Promise<Response> => {
       `,
     });
 
-    console.log("Owner email sent:", ownerEmailResponse);
+    console.log("Owner email response:", ownerEmailResponse);
 
     // Send confirmation email to user
     const userEmailResponse = await resend.emails.send({
-      from: "Kingdom Business <onboarding@resend.dev>",
+      from: "Kingdom Business <no-reply@resend.dev>",
       to: email,
       subject: "We received your message!",
       html: `
@@ -56,7 +57,7 @@ const handler = async (req: Request): Promise<Response> => {
       `,
     });
 
-    console.log("User confirmation email sent:", userEmailResponse);
+    console.log("User confirmation email response:", userEmailResponse);
 
     return new Response(
       JSON.stringify({ message: "Emails sent successfully" }), 
