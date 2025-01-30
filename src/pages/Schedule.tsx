@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { BrandTiktok, Clock } from "lucide-react";
+import { BrandsTiktok, Clock } from "lucide-react";
 
 interface Creator {
   name: string;
@@ -54,7 +54,7 @@ const Schedule = () => {
                     className="w-full sm:w-auto mt-4"
                     onClick={() => window.open(creator.tiktokUrl, '_blank')}
                   >
-                    <BrandTiktok className="mr-2 h-4 w-4" />
+                    <BrandsTiktok className="mr-2 h-4 w-4" />
                     Follow on TikTok
                   </Button>
                 </div>
