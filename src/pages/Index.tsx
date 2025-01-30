@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Heart, Users, MessageSquare, DollarSign, BookOpen, Handshake, Home } from "lucide-react";
+import { Heart, Users, MessageSquare, DollarSign, BookOpen, Handshake, Home, Video } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -11,9 +11,9 @@ const Index = () => {
       description: "Building strong relationships through compassion and support"
     },
     {
-      icon: <Users className="w-12 h-12 text-primary" />,
-      title: "Group Sessions",
-      description: "Connect and grow with like-minded individuals"
+      icon: <Video className="w-12 h-12 text-primary" />,
+      title: "Live Streaming Schedules",
+      description: "Connect and grow with live online sessions"
     },
     {
       icon: <MessageSquare className="w-12 h-12 text-primary" />,
