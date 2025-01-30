@@ -9,6 +9,7 @@ import Outreach from "./pages/Outreach";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Schedule from "./pages/Schedule";
+import Coaching from "./pages/Coaching";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/outreach" element={<Outreach />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/schedule" element={<Schedule />} />
+          <Route path="/coaching" element={<Coaching />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
