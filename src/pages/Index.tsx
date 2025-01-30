@@ -83,7 +83,7 @@ const Index = () => {
         <div className="container px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Join Our Community</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Connect with us and discover how we can grow together in faith and purpose.
+            Connect with us and discover how we can grow together in faith & through prayer as we follow his purpose to wake the sleepers.
           </p>
           <Button size="lg" variant="secondary" asChild>
             <Link to="/contact">Get in Touch</Link>
