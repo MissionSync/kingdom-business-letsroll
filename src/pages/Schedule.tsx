@@ -13,15 +13,6 @@ interface Creator {
 
 const creators: Creator[] = [
   {
-    name: "Kingdom Business",
-    tiktokUrl: "https://www.tiktok.com/@kingdombusinessletsroll",
-    schedule: [
-      { day: "Monday", time: "7:00 PM EST" },
-      { day: "Wednesday", time: "7:00 PM EST" },
-      { day: "Friday", time: "7:00 PM EST" }
-    ]
-  },
-  {
     name: "Raising Boys",
     tiktokUrl: "https://www.tiktok.com/@raising.boyskbmmg",
     schedule: [
