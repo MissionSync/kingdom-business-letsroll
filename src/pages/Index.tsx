@@ -13,7 +13,8 @@ const Index = () => {
     {
       icon: <Video className="w-12 h-12 text-primary" />,
       title: "Live Streaming Schedules",
-      description: "Connect and grow with live online sessions"
+      description: "Connect and grow with live online sessions",
+      link: "/schedule"
     },
     {
       icon: <MessageSquare className="w-12 h-12 text-primary" />,
@@ -71,6 +72,13 @@ const Index = () => {
                   <CardDescription className="text-center text-base">
                     {service.description}
                   </CardDescription>
+                  {service.link && (
+                    <div className="mt-4 text-center">
+                      <Button variant="outline" asChild>
+                        <Link to={service.link}>View Schedule</Link>
+                      </Button>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             ))}
