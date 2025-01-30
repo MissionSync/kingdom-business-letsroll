@@ -14,6 +14,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { toast } from "sonner"
+import { supabase } from "@/integrations/supabase/client"
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -41,11 +42,20 @@ export function ContactForm() {
     },
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // This is where we'll add the email sending functionality once Supabase is connected
-    console.log(values)
-    toast.success("Form submitted successfully!")
-    form.reset()
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      const { error } = await supabase.functions.invoke('send-contact-email', {
+        body: values
+      });
+
+      if (error) throw error;
+
+      toast.success("Message sent successfully! Check your email for confirmation.");
+      form.reset();
+    } catch (error) {
+      console.error('Error sending message:', error);
+      toast.error("Failed to send message. Please try again later.");
+    }
   }
 
   return (
