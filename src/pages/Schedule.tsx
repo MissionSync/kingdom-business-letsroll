@@ -20,6 +20,21 @@ const creators: Creator[] = [
       { day: "Wednesday", time: "7:00 PM EST" },
       { day: "Friday", time: "7:00 PM EST" }
     ]
+  },
+  {
+    name: "Raising Boys",
+    tiktokUrl: "https://www.tiktok.com/@raising.boyskbmmg",
+    schedule: [
+      { day: "Monday", time: "9:00 AM MST" },
+      { day: "Monday", time: "9:00 PM MST" },
+      { day: "Tuesday", time: "9:00 AM MST" },
+      { day: "Tuesday", time: "9:00 PM MST" },
+      { day: "Wednesday", time: "9:00 AM MST" },
+      { day: "Wednesday", time: "9:00 PM MST" },
+      { day: "Friday", time: "10:00 PM MST" },
+      { day: "Saturday", time: "7:00 AM MST" },
+      { day: "Sunday", time: "7:00 AM MST" }
+    ]
   }
 ];
 
@@ -29,7 +44,7 @@ const Schedule = () => {
       <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl font-bold mb-4">Live Streaming Schedule</h1>
         <p className="text-muted-foreground mb-8">
-          Join our live sessions on TikTok. All times are in Eastern Standard Time (EST).
+          Join our live sessions on TikTok. All times are shown in their local timezone.
         </p>
         
         <div className="space-y-4">
