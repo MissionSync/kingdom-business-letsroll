@@ -49,7 +49,7 @@ const Index = () => {
             Building community connections and fostering spiritual growth through compassion, guidance, and support.
           </p>
           <Button size="lg" asChild>
-            <Link to="/outreach">Explore Our Services</Link>
+            <Link to="/about">About Us</Link>
           </Button>
         </div>
       </section>
