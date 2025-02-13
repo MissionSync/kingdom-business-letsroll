@@ -1,3 +1,4 @@
+
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
@@ -44,11 +45,19 @@ export function ContactForm() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      const { error } = await supabase.functions.invoke('send-contact-email', {
+      // First, save to Supabase
+      const { error: dbError } = await supabase
+        .from('contact_submissions')
+        .insert([values]);
+
+      if (dbError) throw dbError;
+
+      // Then, send emails
+      const { error: emailError } = await supabase.functions.invoke('send-contact-email', {
         body: values
       });
 
-      if (error) throw error;
+      if (emailError) throw emailError;
 
       toast.success("Message sent successfully! Check your email for confirmation.");
       form.reset();
