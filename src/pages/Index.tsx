@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Heart, Users, MessageSquare, DollarSign, BookOpen, Handshake, Home, Video } from "lucide-react";
@@ -19,7 +20,8 @@ const Index = () => {
     {
       icon: <MessageSquare className="w-12 h-12 text-primary" />,
       title: "Coaching",
-      description: "Personal guidance for your spiritual journey"
+      description: "Personal guidance for your spiritual journey",
+      link: "/coaching"
     },
     {
       icon: <BookOpen className="w-12 h-12 text-primary" />,
@@ -43,12 +45,20 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center justify-center bg-gradient-to-r from-primary/10 to-primary/5">
         <div className="container px-4 text-center">
+          <div className="flex justify-center mb-8">
+            <img 
+              src="/lovable-uploads/85cff93d-8fbb-4fab-b459-c1c9c6ca1e70.png" 
+              alt="KBLR Logo" 
+              className="w-48 h-auto"
+            />
+          </div>
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
             Welcome to Kingdom Business
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Building community connections and fostering spiritual growth through compassion, guidance, and support.
+            Here to wake the sleeper to equip & enable them to find the lost because the harvest is now
           </p>
+          <p className="text-lg text-primary mb-8">EPH 5:14</p>
           <Button size="lg" asChild>
             <Link to="/about">About Us</Link>
           </Button>
@@ -75,7 +85,7 @@ const Index = () => {
                   {service.link && (
                     <div className="mt-4 text-center">
                       <Button variant="outline" asChild>
-                        <Link to={service.link}>View Schedule</Link>
+                        <Link to={service.link}>Learn More</Link>
                       </Button>
                     </div>
                   )}
