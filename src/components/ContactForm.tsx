@@ -45,10 +45,15 @@ export function ContactForm() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      // First, save to Supabase
+      // First, save to Supabase - now properly typed
       const { error: dbError } = await supabase
         .from('contact_submissions')
-        .insert([values]);
+        .insert({
+          name: values.name,
+          email: values.email,
+          purpose: values.purpose,
+          message: values.message
+        });
 
       if (dbError) throw dbError;
 
