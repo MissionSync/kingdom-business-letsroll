@@ -45,6 +45,13 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center justify-center bg-gradient-to-r from-primary/10 to-primary/5">
         <div className="container px-4 text-center">
+          <div className="flex justify-center mb-8">
+            <img 
+              src="/lovable-uploads/85cff93d-8fbb-4fab-b459-c1c9c6ca1e70.png" 
+              alt="KBLR Logo" 
+              className="w-48 h-auto"
+            />
+          </div>
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
             Welcome to Kingdom Business
           </h1>
