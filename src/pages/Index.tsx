@@ -103,7 +103,7 @@ const Index = () => {
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Connect with us and discover how we can grow together in faith & through prayer as we follow his purpose to wake the sleepers.
           </p>
-          <Button size="lg" variant="secondary" asChild>
+          <Button size="lg" variant="secondary" className="bg-green-600 hover:bg-green-700 text-white" asChild>
             <Link to="/contact">Get in Touch</Link>
           </Button>
         </div>
