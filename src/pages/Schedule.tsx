@@ -1,6 +1,7 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Clock } from "lucide-react";
+import { ExternalLink, Clock, BookOpen } from "lucide-react";
 
 interface Creator {
   name: string;
@@ -46,9 +47,15 @@ const Schedule = () => {
               <CardContent>
                 <div className="space-y-4">
                   {creator.schedule.map((slot, slotIndex) => (
-                    <div key={slotIndex} className="flex items-center gap-2 text-muted-foreground">
-                      <Clock className="h-4 w-4" />
-                      <span>{slot.day}s at {slot.time}</span>
+                    <div key={slotIndex} className="flex flex-col gap-2">
+                      <div className="flex items-center gap-2 text-muted-foreground">
+                        <Clock className="h-4 w-4" />
+                        <span>{slot.day}s at {slot.time}</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-muted-foreground ml-6">
+                        <BookOpen className="h-4 w-4" />
+                        <span>Topic: {slot.topic}</span>
+                      </div>
                     </div>
                   ))}
                   
