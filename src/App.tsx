@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Schedule from "./pages/Schedule";
 import Coaching from "./pages/Coaching";
+import Support from "./pages/Support";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="/schedule" element={<Schedule />} />
             <Route path="/coaching" element={<Coaching />} />
+            <Route path="/support" element={<Support />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>

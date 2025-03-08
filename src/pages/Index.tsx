@@ -36,7 +36,8 @@ const Index = () => {
     {
       icon: <DollarSign className="w-12 h-12 text-primary" />,
       title: "Support",
-      description: "Contribute to our mission through donations"
+      description: "Contribute to our mission through donations",
+      link: "/support"
     }
   ];
 
