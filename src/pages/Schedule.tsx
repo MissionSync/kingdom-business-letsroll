@@ -8,6 +8,7 @@ interface Creator {
   schedule: {
     day: string;
     time: string;
+    topic: string;
   }[];
 }
 
@@ -16,15 +17,13 @@ const creators: Creator[] = [
     name: "Raising Boys",
     tiktokUrl: "https://www.tiktok.com/@raising.boyskbmmg",
     schedule: [
-      { day: "Monday", time: "9:00 AM MST" },
-      { day: "Monday", time: "9:00 PM MST" },
-      { day: "Tuesday", time: "9:00 AM MST" },
-      { day: "Tuesday", time: "9:00 PM MST" },
-      { day: "Wednesday", time: "9:00 AM MST" },
-      { day: "Wednesday", time: "9:00 PM MST" },
-      { day: "Friday", time: "10:00 PM MST" },
-      { day: "Saturday", time: "7:00 AM MST" },
-      { day: "Sunday", time: "7:00 AM MST" }
+      { day: "Monday", time: "9:00 AM - 9:00 PM MST", topic: "General" },
+      { day: "Tuesday", time: "10:00 AM - 2:00 PM MST", topic: "Parenting" },
+      { day: "Wednesday", time: "9:00 AM - 9:00 PM MST", topic: "Wake the World" },
+      { day: "Thursday", time: "10:00 AM - 2:00 PM MST", topic: "Relationships" },
+      { day: "Friday", time: "10:00 PM MST", topic: "General" },
+      { day: "Saturday", time: "7:00 AM MST", topic: "General" },
+      { day: "Sunday", time: "7:00 AM MST", topic: "General" }
     ]
   }
 ];
