@@ -13,6 +13,7 @@ import NotFound from "./pages/NotFound";
 import Schedule from "./pages/Schedule";
 import Coaching from "./pages/Coaching";
 import Support from "./pages/Support";
+import Partnerships from "./pages/Partnerships";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
             <Route path="/schedule" element={<Schedule />} />
             <Route path="/coaching" element={<Coaching />} />
             <Route path="/support" element={<Support />} />
+            <Route path="/partnerships" element={<Partnerships />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>

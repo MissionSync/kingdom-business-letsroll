@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Heart, Users, MessageSquare, DollarSign, BookOpen, Handshake, Home, Video } from "lucide-react";
@@ -31,7 +30,8 @@ const Index = () => {
     {
       icon: <Handshake className="w-12 h-12 text-primary" />,
       title: "Partnerships",
-      description: "Organizations we support and want to highlight"
+      description: "Organizations we support and want to highlight",
+      link: "/partnerships"
     },
     {
       icon: <DollarSign className="w-12 h-12 text-primary" />,
