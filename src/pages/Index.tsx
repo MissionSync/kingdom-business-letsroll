@@ -31,7 +31,7 @@ const Index = () => {
     {
       icon: <Handshake className="w-12 h-12 text-primary" />,
       title: "Partnerships",
-      description: "Collaborate with community businesses"
+      description: "Organizations we support and want to highlight"
     },
     {
       icon: <DollarSign className="w-12 h-12 text-primary" />,
