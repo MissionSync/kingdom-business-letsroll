@@ -19,6 +19,11 @@ const partners: Partner[] = [
     name: "Veterans Aid Network",
     description: "Veterans Aid Network is dedicated to supporting those who have served our country with honor and courage. Our organization provides essential resources, guidance, and advocacy for veterans navigating the complexities of civilian life. Through personalized assistance with benefits claims, healthcare access, housing solutions, and employment opportunities, we're committed to ensuring no veteran faces their challenges alone. Our network of experienced volunteers and professionals works tirelessly to bridge the gaps in veteran services, creating a seamless support system for heroes in need. Join us in our mission to honor their service by providing the support they deserve.",
     website: "https://veteransaidnetwork.net/"
+  },
+  {
+    name: "The Danielle Lopez Fight Hard Love Harder Foundation",
+    description: "The Danielle Lopez Fight Hard Love Harder Foundation is dedicated to empowering individuals facing life's toughest challenges through compassion, resilience, and community support. Founded by Danielle Lopez, our organization embodies the philosophy that while life's battles may be difficult, the power of love and connection is always stronger. Our mission is to provide resources, education, and support programs that help people navigate personal struggles while fostering meaningful connections within their communities. We believe that by fighting hard against adversity and loving even harder, individuals can overcome obstacles and create positive change in their lives and the lives of others.",
+    website: "https://www.daniellelopezfighthardloveharderfoundation.com/"
   }
 ];
 
