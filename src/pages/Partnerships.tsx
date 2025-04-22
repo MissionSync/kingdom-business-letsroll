@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ExternalLink, Heart } from "lucide-react";
@@ -24,6 +23,11 @@ const partners: Partner[] = [
     name: "The Danielle Lopez Fight Hard Love Harder Foundation",
     description: "The Danielle Lopez Fight Hard Love Harder Foundation is dedicated to empowering individuals facing life's toughest challenges through compassion, resilience, and community support. Founded by Danielle Lopez, our organization embodies the philosophy that while life's battles may be difficult, the power of love and connection is always stronger. Our mission is to provide resources, education, and support programs that help people navigate personal struggles while fostering meaningful connections within their communities. We believe that by fighting hard against adversity and loving even harder, individuals can overcome obstacles and create positive change in their lives and the lives of others.",
     website: "https://www.daniellelopezfighthardloveharderfoundation.com/"
+  },
+  {
+    name: "180 Ministries",
+    description: "Recovery Starts Here | Residential Recovery for Men and Women. At 180 Ministries, we are much more than just a rehabilitation center. We are a transformative organization dedicated to helping individuals overcome life-controlling problems and find true and lasting recovery. With branches in Denver and Olathe, Colorado, as well as Tooele, Utah, we provide a safe and supportive environment where individuals can embark on a journey of recovery and personal growth.",
+    website: "https://www.180ministries.net/"
   }
 ];
 
