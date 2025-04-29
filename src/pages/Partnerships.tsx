@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ExternalLink, Heart } from "lucide-react";
@@ -13,11 +14,6 @@ const partners: Partner[] = [
     name: "Youth Haven",
     description: "Youth Haven provides safe shelter, vital support, and life-changing programs for vulnerable and homeless youth in our community. Through compassionate care, educational opportunities, and mental health services, we empower young people to heal from trauma, develop essential life skills, and build pathways to independence. Visit our website to learn more about our mission, volunteer opportunities, and how you can help transform young lives.",
     website: "https://www.youthhaven.org/"
-  },
-  {
-    name: "Veterans Aid Network",
-    description: "Veterans Aid Network is dedicated to supporting those who have served our country with honor and courage. Our organization provides essential resources, guidance, and advocacy for veterans navigating the complexities of civilian life. Through personalized assistance with benefits claims, healthcare access, housing solutions, and employment opportunities, we're committed to ensuring no veteran faces their challenges alone. Our network of experienced volunteers and professionals works tirelessly to bridge the gaps in veteran services, creating a seamless support system for heroes in need. Join us in our mission to honor their service by providing the support they deserve.",
-    website: "https://veteransaidnetwork.net/"
   },
   {
     name: "The Danielle Lopez Fight Hard Love Harder Foundation",
