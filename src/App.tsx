@@ -14,6 +14,7 @@ import Schedule from "./pages/Schedule";
 import Coaching from "./pages/Coaching";
 import Support from "./pages/Support";
 import Partnerships from "./pages/Partnerships";
+import QRCodes from "./pages/QRCodes";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +34,7 @@ const App = () => (
             <Route path="/coaching" element={<Coaching />} />
             <Route path="/support" element={<Support />} />
             <Route path="/partnerships" element={<Partnerships />} />
+            <Route path="/qr-codes" element={<QRCodes />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>

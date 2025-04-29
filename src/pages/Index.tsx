@@ -1,6 +1,7 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Heart, Users, MessageSquare, DollarSign, BookOpen, Handshake, Home, Video } from "lucide-react";
+import { Heart, Users, MessageSquare, DollarSign, BookOpen, Handshake, Home, Video, QrCode } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -38,6 +39,12 @@ const Index = () => {
       title: "Support",
       description: "Contribute to our mission through donations",
       link: "/support"
+    },
+    {
+      icon: <QrCode className="w-12 h-12 text-primary" />,
+      title: "QR Codes",
+      description: "Scan to quickly access our website on mobile",
+      link: "/qr-codes"
     }
   ];
 
