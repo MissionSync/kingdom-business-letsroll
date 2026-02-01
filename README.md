@@ -1,69 +1,121 @@
-# Welcome to your Lovable project
+# Kingdom Business Let's Roll (KBLR)
 
-## Project info
+A faith-based community platform dedicated to waking the sleeper, equipping believers, and reaching the lost.
 
-**URL**: https://lovable.dev/projects/5d02955a-ffbf-4ef9-84e6-2bfe117bf4f5
+**Live Site**: https://kingdom-business-letsroll.netlify.app/
 
-## How can I edit this code?
+## About the Organization
 
-There are several ways of editing your application.
+**Mission**: *"Here to wake the sleeper to equip & enable them to find the lost because the harvest is now"* — Ephesians 5:14
 
-**Use Lovable**
+Kingdom Business demonstrates genuine love through actively opposing evil, embracing good, and living in harmony with others. The organization strives to reflect the character of Christ in daily life through acts of kindness, forgiveness, and authentic community support (Romans 12:9-17).
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/5d02955a-ffbf-4ef9-84e6-2bfe117bf4f5) and start prompting.
+### Core Services
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Community Care** — Building strong relationships through compassion and support
+- **Live Streaming** — Connect and grow with live online sessions
+- **Coaching** — Personal guidance for your spiritual journey
+- **Resources** — Access to valuable learning materials
+- **Partnerships** — Highlighting and supporting aligned organizations
+- **Support/Donations** — Contribute to the mission
 
-**Use your preferred IDE**
+## Tech Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+| Layer | Technology |
+|-------|------------|
+| Frontend | React 18, TypeScript, Vite |
+| Styling | Tailwind CSS, shadcn/ui |
+| Backend | Netlify Functions (serverless) |
+| Database | Neon PostgreSQL |
+| Email | Resend |
+| Hosting | Netlify |
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Local Development
 
-Follow these steps:
+### Prerequisites
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- Node.js 18+ (install via [nvm](https://github.com/nvm-sh/nvm))
+- Netlify CLI (for local function testing)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Setup
 
-# Step 3: Install the necessary dependencies.
-npm i
+```bash
+# Clone the repository
+git clone https://github.com/your-username/kingdom-business-letsroll.git
+cd kingdom-business-letsroll
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+# Install dependencies
+npm install
+
+# Install Netlify CLI globally (for testing serverless functions)
+npm install -g netlify-cli
 ```
 
-**Edit a file directly in GitHub**
+### Environment Variables
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Create a `.env` file in the root directory:
 
-**Use GitHub Codespaces**
+```env
+DATABASE_URL=your_neon_connection_string
+RESEND_API_KEY=your_resend_api_key
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Running Locally
 
-## What technologies are used for this project?
+```bash
+# Frontend only (contact form won't work)
+npm run dev
 
-This project is built with .
+# Full stack with Netlify Functions
+netlify dev
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Deployment
 
-## How can I deploy this project?
+The site is deployed automatically via Netlify when changes are pushed to the `main` branch.
 
-Simply open [Lovable](https://lovable.dev/projects/5d02955a-ffbf-4ef9-84e6-2bfe117bf4f5) and click on Share -> Publish.
+### Environment Variables (Netlify Dashboard)
 
-## I want to use a custom domain - is that possible?
+Set these in **Site Settings → Environment Variables**:
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+- `DATABASE_URL` — Neon PostgreSQL connection string
+- `RESEND_API_KEY` — Resend API key for email notifications
+
+## Project Structure
+
+```
+├── netlify/
+│   └── functions/        # Serverless functions (contact form handler)
+├── src/
+│   ├── components/       # Reusable UI components
+│   ├── pages/            # Route pages (Index, About, Contact, etc.)
+│   └── hooks/            # Custom React hooks
+├── public/               # Static assets
+├── netlify.toml          # Netlify configuration
+└── package.json
+```
+
+## Database Schema
+
+Contact form submissions are stored in Neon PostgreSQL:
+
+```sql
+CREATE TABLE contact_submissions (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  name TEXT NOT NULL,
+  email TEXT NOT NULL,
+  purpose TEXT NOT NULL CHECK (purpose IN ('prayer', 'partnership', 'other')),
+  message TEXT NOT NULL
+);
+```
+
+## Cost
+
+This project runs entirely on free tiers:
+
+| Service | Free Tier |
+|---------|-----------|
+| Netlify | 100 GB bandwidth, 300 build minutes/month |
+| Neon | 0.5 GB storage, 190 compute hours/month |
+| Resend | 3,000 emails/month |
