@@ -15,7 +15,6 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { toast } from "sonner"
-import { supabase } from "@/integrations/supabase/client"
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -45,24 +44,15 @@ export function ContactForm() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      // First, save to Supabase - now properly typed
-      const { error: dbError } = await supabase
-        .from('contact_submissions')
-        .insert({
-          name: values.name,
-          email: values.email,
-          purpose: values.purpose,
-          message: values.message
-        });
-
-      if (dbError) throw dbError;
-
-      // Then, send emails
-      const { error: emailError } = await supabase.functions.invoke('send-contact-email', {
-        body: values
+      const response = await fetch('/.netlify/functions/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(values),
       });
 
-      if (emailError) throw emailError;
+      if (!response.ok) {
+        throw new Error('Failed to submit form');
+      }
 
       toast.success("Message sent successfully! Check your email for confirmation.");
       form.reset();

@@ -1,4 +1,0 @@
-project_id = "wkrbnntnsyavphpmulfw"
-
-[functions.send-contact-email]
-verify_jwt = false
