@@ -2,7 +2,7 @@
 
 A faith-based community platform dedicated to waking the sleeper, equipping believers, and reaching the lost.
 
-**Live Site**: https://kingdom-business-letsroll.netlify.app/
+**Live Site**: _currently offline (the previous Netlify URL returns 404); link will be updated when the site is redeployed._
 
 ## About the Organization
 
@@ -41,7 +41,7 @@ Kingdom Business demonstrates genuine love through actively opposing evil, embra
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/kingdom-business-letsroll.git
+git clone https://github.com/MissionSync/kingdom-business-letsroll.git
 cd kingdom-business-letsroll
 
 # Install dependencies
